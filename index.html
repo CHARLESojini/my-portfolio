@@ -44,7 +44,7 @@
                             & analytics solutions
                         </h1>
                         <p class="hero-subtitle">
-                            5+ years transforming data chaos into actionable insights with Python, PySpark, Azure, and modern data stacks
+                            5+ years transforming data chaos into actionable insights with Python, PySpark, dbt, Snowflake, and modern data stacks
                         </p>
                         <div class="hero-cta">
                             <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -56,7 +56,7 @@
                                 <div class="stat-label">Years Experience</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-number">10+</div>
+                                <div class="stat-number">12+</div>
                                 <div class="stat-label">Projects Built</div>
                             </div>
                             <div class="stat-item">
@@ -99,7 +99,7 @@
                                 <div class="highlight-card">
                                     <div class="highlight-icon">🔧</div>
                                     <h4>Technical Depth</h4>
-                                    <p>Expert in Python, SQL, PySpark, Airflow, and modern cloud platforms</p>
+                                    <p>Expert in Python, SQL, PySpark, Airflow, dbt, and modern cloud platforms</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -113,7 +113,7 @@
                                 <div class="highlight-card">
                                     <div class="highlight-icon">☁️</div>
                                     <h4>Cloud Native</h4>
-                                    <p>Proficient with Azure services, containerization, and CI/CD pipelines</p>
+                                    <p>Proficient with AWS, Azure, Kubernetes, Terraform, and CI/CD pipelines</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -139,10 +139,118 @@
             </div>
             <div class="row g-4">
 
-                <!-- Project: Real-Time Stock Market Analysis -->
+                <!-- Project: dbt-ACMEMART -->
                 <div class="col-lg-6">
                     <div class="project-card">
                         <div class="project-badge">New</div>
+                        <div class="project-header">
+                            <h3>dbt-ACMEMART — Analytics Engineering on Snowflake</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Snowflake</span>
+                                <span class="tech-tag">dbt-fusion</span>
+                                <span class="tech-tag">Airbyte</span>
+                                <span class="tech-tag">Medallion</span>
+                                <span class="tech-tag">Star Schema</span>
+                                <span class="tech-tag">Tableau</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Production-grade analytics engineering pipeline modeling 10K+ retail transactions through a four-layer medallion architecture (Bronze → Silver → Gold) into a BI-ready star schema. Built with dbt-fusion on Snowflake, ingested via Airbyte. Diagnosed and fixed a silent NULL-injection bug affecting 2.6% of records by replacing TRY_CAST with defensive COALESCE of multi-format timestamp parsers, recovering all 268 affected rows.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-label">dbt Tests</span>
+                                <span class="metric-value">37 / 37 ✓</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Data Models</span>
+                                <span class="metric-value">6</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Build Time</span>
+                                <span class="metric-value">&lt;10s</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/CHARLESojini/dbt-ACMEMART" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project: stock-pipeline-k8s -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-badge">New</div>
+                        <div class="project-header">
+                            <h3>Stock Pipeline on Kubernetes (EKS)</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">AWS EKS</span>
+                                <span class="tech-tag">Terraform</span>
+                                <span class="tech-tag">Helm</span>
+                                <span class="tech-tag">Kafka (Strimzi)</span>
+                                <span class="tech-tag">GitHub Actions</span>
+                                <span class="tech-tag">PySpark</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Re-architected a real-time stock market pipeline from a Docker Compose proof-of-concept into a cloud-native deployment on AWS EKS. Infrastructure provisioned with Terraform, applications packaged via Helm, CI/CD through GitHub Actions. Kafka deployed via the Strimzi operator in KRaft mode, with manifests validated on local Kind clusters before promotion to EKS.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Cluster</span>
+                                <span class="metric-value">EKS</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">IaC</span>
+                                <span class="metric-value">Terraform</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">CI/CD</span>
+                                <span class="metric-value">GH Actions</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/CHARLESojini/stock-pipeline-k8s" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project: MANDERA_ANALYTICS -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-badge">New</div>
+                        <div class="project-header">
+                            <h3>MANDERA_ANALYTICS — Orchestrated Batch Pipeline</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Airflow</span>
+                                <span class="tech-tag">MongoDB Atlas</span>
+                                <span class="tech-tag">MinIO</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Docker Compose</span>
+                                <span class="tech-tag">GitHub Actions</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            End-to-end batch pipeline orchestrated by Apache Airflow. GitHub Actions injects synthetic e-commerce data into MongoDB Atlas twice daily; the DAG archives raw documents to MinIO, loads them into a PostgreSQL raw schema, and validates each entity into a staging schema with referential integrity enforced. Implements a durable raw-layer pattern: raw tables truncate after successful staging loads while the underlying JSON stays in MinIO for replay and audit.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Services</span>
+                                <span class="metric-value">8</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Schedule</span>
+                                <span class="metric-value">2x daily</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">DAG Tasks</span>
+                                <span class="metric-value">6 (parallel)</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/CHARLESojini/MANDERA_ANALYTICS" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project: Real-Time Stock Market Analysis -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-badge">Featured</div>
                         <div class="project-header">
                             <h3>Real-Time Stock Market Pipeline</h3>
                             <div class="tech-stack">
@@ -174,7 +282,7 @@
                     </div>
                 </div>
 
-                <!-- Project 1 -->
+                <!-- Project: Amazon Apparel ETL -->
                 <div class="col-lg-6">
                     <div class="project-card">
                         <div class="project-badge">Featured</div>
@@ -207,10 +315,9 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project: Sales API Pipeline -->
                 <div class="col-lg-6">
                     <div class="project-card">
-                        <div class="project-badge">Featured</div>
                         <div class="project-header">
                             <h3>Sales API Pipeline</h3>
                             <div class="tech-stack">
@@ -240,39 +347,7 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="col-lg-6">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>OptiRide Analytics</h3>
-                            <div class="tech-stack">
-                                <span class="tech-tag">PySpark</span>
-                                <span class="tech-tag">Airflow</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            ETL system integrating NYC Citi Bike data with weather patterns. Built dimensional models for analysis. Scheduled daily orchestration using Apache Airflow with automated data quality checks.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-label">Daily Records</span>
-                                <span class="metric-value">100K+</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Dimensions</span>
-                                <span class="metric-value">12</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Uptime</span>
-                                <span class="metric-value">99.9%</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/CHARLESojini/optiride_eetl" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
+                <!-- Project: UK Business Portal Scraper -->
                 <div class="col-lg-6">
                     <div class="project-card">
                         <div class="project-header">
@@ -301,38 +376,6 @@
                             </div>
                         </div>
                         <a href="https://github.com/CHARLESojini/UK-Business-Portal-Web-Scraper" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="col-lg-6">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Chima's Pizza House Database</h3>
-                            <div class="tech-stack">
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">GCP Cloud SQL</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Enterprise database system deployed on Google Cloud Platform. Designed a 7-table normalized schema (3NF), populated with 21,000+ rows of synthetic data using Python and Faker, and wrote analytics queries answering key business questions.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-label">Total Records</span>
-                                <span class="metric-value">21K+</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Tables Designed</span>
-                                <span class="metric-value">7</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Analytics Queries</span>
-                                <span class="metric-value">5</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/CHARLESojini/chimas-pizza-house" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -365,7 +408,7 @@
                             <li><span class="skill-name">Apache Kafka</span><span class="skill-level">Advanced</span></li>
                             <li><span class="skill-name">Apache Airflow</span><span class="skill-level">Advanced</span></li>
                             <li><span class="skill-name">Apache Spark</span><span class="skill-level">Advanced</span></li>
-                            <li><span class="skill-name">FastAPI</span><span class="skill-level">Intermediate</span></li>
+                            <li><span class="skill-name">dbt</span><span class="skill-level">Advanced</span></li>
                         </ul>
                     </div>
                 </div>
@@ -373,10 +416,10 @@
                     <div class="skill-category">
                         <h4>Cloud & Infrastructure</h4>
                         <ul class="skill-list">
+                            <li><span class="skill-name">AWS (EKS, S3, RDS)</span><span class="skill-level">Advanced</span></li>
                             <li><span class="skill-name">Microsoft Azure</span><span class="skill-level">Expert</span></li>
-                            <li><span class="skill-name">AWS</span><span class="skill-level">Advanced</span></li>
-                            <li><span class="skill-name">Docker</span><span class="skill-level">Advanced</span></li>
-                            <li><span class="skill-name">Kubernetes</span><span class="skill-level">Intermediate</span></li>
+                            <li><span class="skill-name">Terraform</span><span class="skill-level">Advanced</span></li>
+                            <li><span class="skill-name">Kubernetes / Helm</span><span class="skill-level">Advanced</span></li>
                         </ul>
                     </div>
                 </div>
@@ -384,10 +427,10 @@
                     <div class="skill-category">
                         <h4>Databases & Platforms</h4>
                         <ul class="skill-list">
-                            <li><span class="skill-name">PostgreSQL</span><span class="skill-level">Expert</span></li>
                             <li><span class="skill-name">Snowflake</span><span class="skill-level">Advanced</span></li>
-                            <li><span class="skill-name">dbt</span><span class="skill-level">Advanced</span></li>
-                            <li><span class="skill-name">Git/GitHub</span><span class="skill-level">Expert</span></li>
+                            <li><span class="skill-name">PostgreSQL</span><span class="skill-level">Expert</span></li>
+                            <li><span class="skill-name">Databricks</span><span class="skill-level">Advanced</span></li>
+                            <li><span class="skill-name">Airbyte</span><span class="skill-level">Intermediate</span></li>
                         </ul>
                     </div>
                 </div>
@@ -448,5 +491,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
